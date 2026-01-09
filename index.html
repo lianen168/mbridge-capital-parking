@@ -3,46 +3,267 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Domains For Sale</title>
+    <title>Domain Status</title>
     <style>
-        body { 
-            font-family: 'Helvetica Neue', Arial, sans-serif; 
-            text-align: center; 
-            margin: 0; 
-            padding: 80px 20px; 
-            background: #ffffff; 
-            color: #1a1a1a; 
-            line-height: 1.6;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .container { max-width: 800px; margin: 0 auto; }
-        h1 { font-size: 2.8em; margin-bottom: 40px; color: #0a3d62; }
-        .domains { font-size: 1.8em; font-weight: bold; color: #0a3d62; margin: 40px 0; line-height: 1.8; }
-        p { font-size: 1.3em; margin: 20px auto; max-width: 700px; }
-        .contact { font-size: 1.4em; margin: 60px 0; }
-        .email { color: #0a3d62; text-decoration: none; }
-        .email:hover { text-decoration: underline; }
-        footer { margin-top: 100px; font-size: 0.9em; color: #666; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            background: #000000;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        /* 背景光效 */
+        .light-effect {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: min(100vw, 800px);
+            height: min(100vh, 800px);
+            background: radial-gradient(
+                circle at center,
+                rgba(255, 255, 255, 0.03) 0%,
+                transparent 70%
+            );
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 720px;
+            width: 100%;
+            padding: 60px 40px;
+            background: rgba(20, 20, 20, 0.85);
+            backdrop-filter: blur(12px);
+            border-radius: 24px;
+            box-shadow: 
+                0 20px 60px rgba(0, 0, 0, 0.4),
+                0 0 0 1px rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            position: relative;
+            z-index: 1;
+        }
+
+        .header {
+            margin-bottom: 50px;
+        }
+
+        .title {
+            font-size: clamp(2rem, 6vw, 3.2rem);
+            font-weight: 300;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+            opacity: 0.95;
+            text-transform: uppercase;
+            color: #e0e0e0;
+        }
+
+        .subtitle {
+            font-size: clamp(1rem, 3vw, 1.3rem);
+            opacity: 0.7;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        .domain-section {
+            margin: 50px 0;
+        }
+
+        .domain-group {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .domain {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            opacity: 0.95;
+            text-transform: lowercase;
+            transition: opacity 0.3s ease;
+            padding: 10px 0;
+        }
+
+        .domain:hover {
+            opacity: 0.8;
+        }
+
+        .status-info {
+            background: rgba(40, 40, 40, 0.6);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 40px 0;
+            border-left: 3px solid rgba(100, 100, 100, 0.3);
+        }
+
+        .status-title {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #ccc;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .status-text {
+            font-size: 1.05rem;
+            opacity: 0.8;
+            text-align: left;
+            line-height: 1.7;
+        }
+
+        .status-highlight {
+            background: rgba(80, 80, 80, 0.3);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #aaa;
+        }
+
+        .legal-section {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .legal-title {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #999;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .legal-text {
+            font-size: 0.85rem;
+            opacity: 0.5;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 0.8rem;
+            opacity: 0.4;
+            width: 100%;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 25px;
+                margin: 20px;
+                backdrop-filter: blur(8px);
+            }
+            
+            .domain {
+                letter-spacing: 0.1em;
+            }
+            
+            .domain-group {
+                gap: 15px;
+            }
+            
+            .light-effect {
+                opacity: 0.7;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .domain {
+                font-size: 2.2rem;
+                letter-spacing: 0.05em;
+            }
+            
+            body {
+                padding: 15px;
+            }
+            
+            .status-info {
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 <body>
+    <div class="light-effect"></div>
+    
     <div class="container">
-        <h1>Premium Domains For Sale</h1>
-        
-        <div class="domains">
-            mbridge.capital<br>
-            mbridge.fund
+        <div class="header">
+            <div class="title">Domain Registry</div>
+            <div class="subtitle">These domains are registered and currently inactive</div>
         </div>
         
-        <p>These high-value financial domains are available as a package.</p>
-        
-        <p>Ideal for fintech, investment, or bridging infrastructure brands.</p>
-        
-        <div class="contact">
-            Acquisition inquiries:<br>
-            <a href="mailto:lianen1319@gmail.com" class="email">joshua369x@gmail.com</a>
+        <div class="domain-section">
+            <div class="domain-group">
+                <div class="domain">mbridge.capital</div>
+                <div class="domain">mbridge.fund</div>
+            </div>
         </div>
         
-        <footer>Domains held for potential transfer to qualified stakeholders.</footer>
+        <div class="status-info">
+            <div class="status-title">Domain Registration Status</div>
+            <div class="status-text">
+                The domains <span class="status-highlight">mbridge.capital</span> and 
+                <span class="status-highlight">mbridge.fund</span> are registered and under management. 
+                They are not associated with any active website, product, or commercial service at this time.
+                This page serves as a neutral placeholder indicating domain registration status only.
+            </div>
+        </div>
+        
+        <div class="legal-section">
+            <div class="legal-title">Legal Notice</div>
+            <div class="legal-text">
+                This is an automated domain parking page. It does not represent any company, organization, 
+                product, or service. These domains are not affiliated with any existing business or trademark holder. 
+                For formal inquiries regarding these domains, please refer to the official WHOIS database 
+                through ICANN-accredited registrars.
+            </div>
+        </div>
+        
+        <div class="footer">
+            © <span id="currentYear">2026</span> Domain Registry — All rights reserved.
+        </div>
     </div>
+
+    <script>
+        // 自动更新年份
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // 防止域名文本被选中（可选）
+        document.querySelectorAll('.domain').forEach(domain => {
+            domain.addEventListener('mousedown', function(e) {
+                if (e.detail > 1) { // 双击
+                    e.preventDefault();
+                }
+            });
+        });
+        
+        // 控制光效在移动端的性能
+        if ('matchMedia' in window) {
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+            if (reduceMotion.matches) {
+                document.querySelector('.light-effect').style.opacity = '0.1';
+            }
+        }
+    </script>
 </body>
 </html>
