@@ -3,375 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO 优化 -->
-    <meta name="description" content="Domains mbridge.capital and mbridge.fund are registered and under management. For legitimate inquiries only.">
-    <meta name="keywords" content="mbridge.capital, mbridge.fund, domain registry, premium domain">
-    <meta name="robots" content="index, follow">
-    <title>mbridge.capital & mbridge.fund | Domain Registry</title>
-    
+    <title>mbridge.capital & mbridge.fund</title>
+    <meta name="description" content="mbridge.capital and mbridge.fund — Reserved domains. For inquiries only.">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #ffffff;
-            background: #000000;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            text-align: center;
-            position: relative;
-        }
-
-        .light-effect {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: min(100vw, 800px);
-            height: min(100vh, 800px);
-            background: radial-gradient(
-                circle at center,
-                rgba(255, 255, 255, 0.03) 0%,
-                transparent 70%
-            );
-            transform: translate(-50%, -50%);
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        .container {
-            max-width: 720px;
-            width: 100%;
-            padding: 60px 40px;
-            background: rgba(20, 20, 20, 0.85);
-            backdrop-filter: blur(12px);
-            border-radius: 24px;
-            box-shadow: 
-                0 20px 60px rgba(0, 0, 0, 0.4),
-                0 0 0 1px rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            position: relative;
-            z-index: 1;
-        }
-
-        .header {
-            margin-bottom: 50px;
-        }
-
-        .title {
-            font-size: clamp(2rem, 6vw, 3.2rem);
-            font-weight: 300;
-            letter-spacing: 0.1em;
-            margin-bottom: 15px;
-            opacity: 0.95;
-            text-transform: uppercase;
-            color: #e0e0e0;
-        }
-
-        .subtitle {
-            font-size: clamp(1rem, 3vw, 1.3rem);
-            opacity: 0.7;
-            max-width: 600px;
-            margin: 0 auto;
-            font-weight: 300;
-        }
-
-        .domain-section {
-            margin: 50px 0;
-        }
-
-        .domain-group {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-            margin: 30px 0;
-        }
-
-        .domain {
-            font-size: clamp(2.5rem, 8vw, 4.5rem);
-            font-weight: 300;
-            letter-spacing: 0.15em;
-            opacity: 0.95;
-            text-transform: lowercase;
-            transition: opacity 0.3s ease;
-            padding: 10px 0;
-        }
-
-        .domain:hover {
-            opacity: 0.8;
-        }
-
-        .status-info {
-            background: rgba(40, 40, 40, 0.6);
-            border-radius: 16px;
-            padding: 30px;
-            margin: 40px 0;
-            border-left: 3px solid rgba(100, 100, 100, 0.3);
-        }
-
-        .status-title {
-            font-size: 1.2rem;
-            font-weight: 500;
-            color: #ccc;
-            margin-bottom: 15px;
-            text-align: left;
-        }
-
-        .status-text {
-            font-size: 1.05rem;
-            opacity: 0.8;
-            text-align: left;
-            line-height: 1.7;
-        }
-
-        .status-highlight {
-            background: rgba(80, 80, 80, 0.3);
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-family: monospace;
-            color: #aaa;
-        }
-
-        /* 联系区域 */
-        .contact-section {
-            background: rgba(30, 40, 60, 0.4);
-            border-radius: 16px;
-            padding: 35px;
-            margin: 40px 0;
-            border: 1px solid rgba(100, 150, 255, 0.1);
-            position: relative;
-        }
-
-        .contact-title {
-            font-size: 1.3rem;
-            font-weight: 500;
-            color: #a0c8ff;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-
-        .email-link {
-            font-size: 1.5rem;
-            color: #64b5f6;
-            text-decoration: none;
-            font-family: 'Courier New', monospace;
-            padding: 12px 24px;
-            background: rgba(100, 181, 246, 0.1);
-            border-radius: 10px;
-            display: inline-block;
-            margin: 15px 0;
-            border: 1px solid rgba(100, 181, 246, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .email-link:hover {
-            background: rgba(100, 181, 246, 0.2);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(100, 181, 246, 0.1);
-        }
-
-        .contact-note {
-            font-size: 0.95rem;
-            opacity: 0.6;
-            margin-top: 20px;
-            font-style: italic;
-        }
-
-        /* 法律警告 */
-        .legal-warning {
-            background: rgba(60, 30, 30, 0.4);
-            border-radius: 16px;
-            padding: 25px;
-            margin: 40px 0;
-            border-left: 4px solid rgba(255, 100, 100, 0.3);
-        }
-
-        .warning-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #ff9999;
-            margin-bottom: 15px;
-            text-align: left;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .warning-title::before {
-            content: "⚠";
-            font-size: 1.2rem;
-        }
-
-        .warning-text {
-            font-size: 0.95rem;
-            opacity: 0.8;
-            text-align: left;
-            line-height: 1.6;
-        }
-
-        .legal-section {
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .legal-title {
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: #999;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-
-        .legal-text {
-            font-size: 0.85rem;
-            opacity: 0.5;
-            line-height: 1.6;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .footer {
-            margin-top: 40px;
-            font-size: 0.8rem;
-            opacity: 0.4;
-            width: 100%;
-            text-align: center;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 40px 25px;
-                margin: 20px;
-                backdrop-filter: blur(8px);
-            }
-            
-            .domain {
-                letter-spacing: 0.1em;
-            }
-            
-            .email-link {
-                font-size: 1.2rem;
-                padding: 10px 20px;
-            }
-            
-            .contact-section {
-                padding: 25px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .domain {
-                font-size: 2.2rem;
-                letter-spacing: 0.05em;
-            }
-            
-            .email-link {
-                font-size: 1.1rem;
-                word-break: break-all;
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #ffffff; background: #000000; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; text-align: center; position: relative; overflow-x: hidden; }
+        .light-effect { position: absolute; top: 50%; left: 50%; width: min(100vw, 800px); height: min(100vh, 800px); background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, transparent 60%); transform: translate(-50%, -50%); pointer-events: none; z-index: -1; }
+        .container { max-width: 720px; width: 100%; padding: 60px 40px; background: rgba(20, 20, 20, 0.8); backdrop-filter: blur(12px); border-radius: 24px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08); z-index: 1; }
+        .domain-section { margin: 50px 0; }
+        .domain-group { display: flex; flex-direction: column; gap: 25px; }
+        .domain { font-size: clamp(2.5rem, 8vw, 4.5rem); font-weight: 300; letter-spacing: 0.15em; opacity: 0.95; text-transform: lowercase; transition: opacity 0.3s ease; }
+        .domain:hover { opacity: 0.8; }
+        p { font-size: clamp(1.1rem, 4vw, 1.5rem); opacity: 0.8; max-width: 600px; margin: 0 auto 40px; line-height: 1.8; }
+        .note-section { background: rgba(40, 40, 40, 0.4); border-radius: 16px; padding: 25px; margin: 40px 0; border: 1px solid rgba(255, 255, 255, 0.08); }
+        .note-text { font-size: 0.95rem; opacity: 0.7; line-height: 1.7; text-align: left; }
+        .contact-section { margin-top: 40px; }
+        .email-link { font-size: 1.4rem; color: #64b5f6; text-decoration: none; font-family: 'Courier New', monospace; padding: 10px 20px; background: rgba(100, 181, 246, 0.1); border-radius: 10px; display: inline-block; border: 1px solid rgba(100, 181, 246, 0.3); transition: all 0.3s ease; }
+        .email-link:hover { background: rgba(100, 181, 246, 0.2); transform: translateY(-2px); box-shadow: 0 5px 15px rgba(100, 181, 246, 0.1); }
+        .contact-note { font-size: 0.9rem; opacity: 0.6; margin-top: 15px; font-style: italic; }
+        .footer { position: absolute; bottom: 30px; font-size: 0.85rem; opacity: 0.4; width: 100%; text-align: center; }
+        @media (max-width: 768px) { .container { padding: 40px 25px; margin: 20px; } .email-link { font-size: 1.2rem; } .domain { letter-spacing: 0.1em; } }
     </style>
 </head>
 <body>
     <div class="light-effect"></div>
-    
     <div class="container">
-        <div class="header">
-            <div class="title">Domain Registry</div>
-            <div class="subtitle">These domains are currently under management</div>
-        </div>
-        
         <div class="domain-section">
             <div class="domain-group">
                 <div class="domain">mbridge.capital</div>
                 <div class="domain">mbridge.fund</div>
             </div>
         </div>
+        <p>These domains are reserved.<br>Under management.</p>
         
-        <div class="status-info">
-            <div class="status-title">Domain Registration Status</div>
-            <div class="status-text">
-                The domains <span class="status-highlight">mbridge.capital</span> and 
-                <span class="status-highlight">mbridge.fund</span> are registered and under management. 
-                This page serves as a neutral placeholder indicating domain registration status.
+        <!-- 低调解免责（覆盖金融/CBDC，但不点名） -->
+        <div class="note-section">
+            <div class="note-text">
+                These domains are not affiliated with, endorsed by, or connected to any existing financial institutions, bridge financing initiatives, 
+                cross-border payment systems, or CBDC-related projects. The "mbridge" naming is coincidental and this page is for domain management purposes only.
             </div>
         </div>
         
-        <!-- 法律警告 -->
-        <div class="legal-warning">
-            <div class="warning-title">Important Legal Notice</div>
-            <div class="warning-text">
-                These domains are <strong>NOT</strong> affiliated with, endorsed by, or connected to any existing 
-                financial institution, bridge financing company, or trademark holder (including any CBDC-related projects). 
-                The "mbridge" naming is coincidental. This page is for domain management purposes only.
-            </div>
-        </div>
-        
-        <!-- 联系区域（仅保留联系方式，无价格） -->
+        <!-- 联系方式 -->
         <div class="contact-section">
-            <div class="contact-title">Domain Inquiries</div>
-            <div class="status-text">
-                For legitimate inquiries regarding these domains:
-            </div>
-            <a href="#" class="email-link" aria-label="Send email to owner">
+            <a href="#" class="email-link" aria-label="Send email">
                 <span id="email-display">joshua369x@gmail.com</span>
             </a>
             <div class="contact-note">
-                Please use a clear subject line. Unsolicited or commercial proposals may not receive a response.
+                For serious inquiries only.
             </div>
-        </div>
-        
-        <div class="legal-section">
-            <div class="legal-title">Terms & Conditions</div>
-            <div class="legal-text">
-                This domain parking page is provided for informational purposes only. 
-                Any communication via the provided email address is for domain-related inquiries only. 
-                We reserve the right to ignore or block any communication that appears to be spam, fraudulent, 
-                or related to trademark disputes. By contacting us, you acknowledge that these domains 
-                are not currently associated with any active commercial service.
-            </div>
-        </div>
-        
-        <div class="footer">
-            © <span id="currentYear">2026</span> Domain Registry — For inquiry purposes only.
         </div>
     </div>
 
+    <div class="footer">
+        © <span id="currentYear"></span> Domain Registry — All rights reserved.
+    </div>
+
     <script>
-        // 自动更新年份
         document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // 邮箱防爬虫（JS 动态生成 mailto）
         const email = 'joshua369x' + '@' + 'gmail.com';
-        const subject = '?subject=Domain Inquiry: mbridge.capital/.fund';
+        const subject = '?subject=Inquiry: mbridge.capital/.fund';
         const mailto = 'mailto:' + email + subject;
-        
-        const link = document.querySelector('.email-link');
-        link.href = mailto;
+        document.querySelector('.email-link').href = mailto;
         document.getElementById('email-display').textContent = email;
-
-        // 防止域名文本多选
-        document.querySelectorAll('.domain').forEach(domain => {
-            domain.addEventListener('mousedown', function(e) {
-                if (e.detail > 1) e.preventDefault();
-            });
-        });
-
-        // 减弱动画（尊重用户偏好）
-        if ('matchMedia' in window && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            document.querySelector('.light-effect').style.opacity = '0.1';
-        }
     </script>
 </body>
 </html>
