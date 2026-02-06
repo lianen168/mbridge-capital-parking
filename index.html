@@ -3,157 +3,290 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mbridge.capital & mbridge.fund</title>
-    <meta name="description" content="mbridge.capital and mbridge.fund — Reserved domains. For inquiries only.">
+    <title>mbridge.capital — Premium Domain for Sale</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
-            line-height: 1.6; 
-            color: #ffffff; 
-            background: #000000; 
-            min-height: 100vh; 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            justify-content: center; 
-            padding: 20px; 
-            text-align: center; 
-            position: relative; 
-            overflow-x: hidden; 
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Playfair+Display:wght@900&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0f0a1a;
+            color: #e0e0ff;
+            font-family: 'Playfair Display', serif;
+            overflow-x: hidden;
+            text-align: center;
         }
-        .light-effect { 
-            position: absolute; 
-            top: 50%; 
-            left: 50%; 
-            width: min(100vw, 800px); 
-            height: min(100vh, 800px); 
-            background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, transparent 60%); 
-            transform: translate(-50%, -50%); 
-            pointer-events: none; 
-            z-index: -1; 
+
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
         }
-        .container { 
-            max-width: 720px; 
-            width: 100%; 
-            padding: 60px 40px; 
-            background: rgba(20, 20, 20, 0.8); 
-            backdrop-filter: blur(12px); 
-            border-radius: 24px; 
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05); 
-            border: 1px solid rgba(255, 255, 255, 0.08); 
-            z-index: 1; 
+
+        .domain-title {
+            font-size: 9vw;
+            font-weight: 900;
+            letter-spacing: 0.15em;
+            margin: 0;
         }
-        .domain-section { margin: 50px 0; }
-        .domain-group { display: flex; flex-direction: column; gap: 25px; }
-        .domain { 
-            font-size: clamp(2.5rem, 8vw, 4.5rem); 
-            font-weight: 300; 
-            letter-spacing: 0.15em; 
-            opacity: 0.95; 
-            text-transform: lowercase; 
-            transition: opacity 0.3s ease; 
+
+        .mbridge {
+            font-family: 'Orbitron', sans-serif;
+            background: linear-gradient(90deg, #00ffea, #00aaff, #aa00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glowPulse 4s infinite alternate, floatText 7s infinite ease-in-out;
         }
-        .domain:hover { opacity: 0.8; }
-        p { 
-            font-size: clamp(1.1rem, 4vw, 1.5rem); 
-            opacity: 0.8; 
-            max-width: 600px; 
-            margin: 0 auto 40px; 
-            line-height: 1.8; 
+
+        .capital {
+            font-family: 'Playfair Display', serif;
+            color: #ffd700;
+            text-shadow: 0 0 40px #ffd700, 0 0 80px #aa8800;
+            animation: elegantPulse 5s infinite ease-in-out, scaleElegant 6s infinite alternate;
         }
-        .note-section { 
-            background: rgba(40, 40, 40, 0.4); 
-            border-radius: 16px; 
-            padding: 25px; 
-            margin: 40px 0; 
-            border: 1px solid rgba(255, 255, 255, 0.08); 
+
+        @keyframes glowPulse {
+            0% { text-shadow: 0 0 20px #00ffea; }
+            100% { text-shadow: 0 0 70px #00ffea, 0 0 120px #00aaff; }
         }
-        .note-text { 
-            font-size: 0.95rem; 
-            opacity: 0.7; 
-            line-height: 1.7; 
-            text-align: left; 
+
+        @keyframes floatText {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-40px); }
         }
-        .contact-section { margin-top: 40px; }
-        .email-link { 
-            font-size: 1.4rem; 
-            color: #64b5f6; 
-            text-decoration: none; 
-            font-family: 'Courier New', monospace; 
-            padding: 10px 20px; 
-            background: rgba(100, 181, 246, 0.1); 
-            border-radius: 10px; 
-            display: inline-block; 
-            border: 1px solid rgba(100, 181, 246, 0.3); 
-            transition: all 0.3s ease; 
+
+        @keyframes elegantPulse {
+            0%, 100% { opacity: 0.9; }
+            50% { opacity: 1; text-shadow: 0 0 60px #ffd700; }
         }
-        .email-link:hover { 
-            background: rgba(100, 181, 246, 0.2); 
-            transform: translateY(-2px); 
-            box-shadow: 0 5px 15px rgba(100, 181, 246, 0.1); 
+
+        @keyframes scaleElegant {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.2); }
         }
-        .contact-note { 
-            font-size: 0.9rem; 
-            opacity: 0.6; 
-            margin-top: 15px; 
-            font-style: italic; 
+
+        canvas#particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.55;
         }
-        .footer { 
-            position: absolute; 
-            bottom: 30px; 
-            font-size: 0.85rem; 
-            opacity: 0.4; 
-            width: 100%; 
-            text-align: center; 
+
+        .tagline {
+            font-size: 2.8vw;
+            margin-top: 40px;
+            opacity: 0.9;
+            font-style: italic;
+            animation: fadeIn 3s ease-in;
         }
-        @media (max-width: 768px) { 
-            .container { padding: 40px 25px; margin: 20px; } 
-            .email-link { font-size: 1.2rem; } 
-            .domain { letter-spacing: 0.1em; } 
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(60px); }
+            to { opacity: 0.9; transform: translateY(0); }
+        }
+
+        section {
+            padding: 100px 10%;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 3.8rem;
+            margin-bottom: 70px;
+            background: linear-gradient(90deg, #ffd700, #00ffea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .areas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 50px;
+            text-align: left;
+        }
+
+        .area-card {
+            background: rgba(30, 20, 60, 0.4);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid #ffd70044;
+            transition: all 0.5s;
+        }
+
+        .area-card:hover {
+            transform: translateY(-20px);
+            box-shadow: 0 30px 60px rgba(255, 215, 0, 0.25);
+        }
+
+        .area-card h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #00ffea;
+        }
+
+        .price-section {
+            background: linear-gradient(135deg, #1a102a, #0a0515);
+            padding: 140px 10%;
+        }
+
+        .price {
+            font-size: 5.5rem;
+            font-weight: 900;
+            color: #ffd700;
+            margin: 50px 0;
+        }
+
+        .installment {
+            font-size: 2rem;
+            margin-bottom: 70px;
+            opacity: 0.9;
+        }
+
+        .buy-btn {
+            background: linear-gradient(45deg, #ffd700, #00ffea);
+            color: #000;
+            font-size: 2.2rem;
+            font-weight: bold;
+            padding: 25px 70px;
+            border: none;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: all 0.4s;
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.5);
+        }
+
+        .buy-btn:hover {
+            transform: scale(1.12);
+            box-shadow: 0 25px 60px rgba(255, 215, 0, 0.7);
+        }
+
+        footer {
+            padding: 80px 10%;
+            background: #050510;
+        }
+
+        .email {
+            color: #00ffea;
+            cursor: pointer;
+            text-decoration: underline;
+            font-size: 1.4rem;
+        }
+
+        .copied {
+            display: none;
+            color: #ffd700;
+            margin-left: 15px;
+            font-weight: bold;
+        }
+
+        .disclaimer {
+            max-width: 900px;
+            margin: 50px auto 0;
+            font-size: 1rem;
+            opacity: 0.7;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
-    <div class="light-effect"></div>
-    <div class="container">
-        <div class="domain-section">
-            <div class="domain-group">
-                <div class="domain">mbridge.capital</div>
-                <div class="domain">mbridge.fund</div>
-            </div>
-        </div>
-        <p>These domains are reserved.<br>Under management.</p>
-        
-        <!-- 低调中性免责声明 -->
-        <div class="note-section">
-            <div class="note-text">
-                These domains are reserved for future use and are not associated with any third party.
-            </div>
-        </div>
-        
-        <!-- 联系方式（已更新邮箱） -->
-        <div class="contact-section">
-            <a href="#" class="email-link" aria-label="Send email">
-                <span id="email-display">joshua369x@gmail.com</span>
-            </a>
-            <div class="contact-note">
-                For serious inquiries only.
-            </div>
-        </div>
-    </div>
 
-    <div class="footer">
-        © <span id="currentYear"></span> Domain Registry — All rights reserved.
-    </div>
+    <header>
+        <canvas id="particles"></canvas>
+        <h1 class="domain-title">
+            <span class="mbridge">mbridge</span><span class="capital">.capital</span>
+        </h1>
+        <p class="tagline">Bridging the World's Iconic Capitals</p>
+    </header>
 
+    <section>
+        <h2>Premium Opportunities for Capital City Bridge Projects</h2>
+        <div class="areas">
+            <div class="area-card">
+                <h3>Capital City Bridge Tourism Platform</h3>
+                <p>Curated experiences and guided tours of landmark bridges in global capitals like London, Paris, and New York.</p>
+            </div>
+            <div class="area-card">
+                <h3>Architectural Showcase of Capital Bridges</h3>
+                <p>Digital gallery and database highlighting engineering marvels in the world's major capital cities.</p>
+            </div>
+            <div class="area-card">
+                <h3>Historical Bridges of World Capitals</h3>
+                <p>Interactive timelines and stories behind historic bridges that define capital skylines.</p>
+            </div>
+            <div class="area-card">
+                <h3>VR/AR Capital Bridge Experiences</h3>
+                <p>Immersive virtual walks across iconic capital bridges with historical overlays and 360° views.</p>
+            </div>
+            <div class="area-card">
+                <h3>Capital Bridge Photography & Art</h3>
+                <p>Premium platform for professional photography, digital art, and NFT collections of capital city bridges.</p>
+            </div>
+            <div class="area-card">
+                <h3>Cultural Heritage in Capital Cities</h3>
+                <p>Preservation initiatives and educational content focused on bridges as cultural symbols in capitals.</p>
+            </div>
+            <div class="area-card">
+                <h3>Sustainable Urban Bridges in Capitals</h3>
+                <p>Eco-friendly design concepts and case studies for modern bridges in major capital cities.</p>
+            </div>
+            <div class="area-card">
+                <h3>Capital Culture Connection Hub</h3>
+                <p>Community platform linking people through shared appreciation of capital city landmarks and bridges.</p>
+            </div>
+            <div class="area-card">
+                <h3>Metaverse Capital Bridge Recreations</h3>
+                <p>Virtual worlds featuring accurate recreations of famous bridges from global capital cities.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="price-section">
+        <h2>Secure mbridge.capital Today</h2>
+        <div class="price">$21,000 USD</div>
+        <p class="installment">Flexible 7-month payment plan available</p>
+        <button class="buy-btn" onclick="window.open('https://www.spaceship.com/s/buy/mbridge.capital/jhz2BAjJfBqcUL4Y', '_blank')">Buy Now</button>
+    </section>
+
+    <footer>
+        <p>Contact: <span class="email" id="email">joshua369x@gmail.com</span> <span class="copied" id="copied">Copied!</span></p>
+        <div class="disclaimer">
+            Disclaimer: The domain mbridge.capital is offered for sale on an "as-is" basis. The seller makes no representations or warranties regarding trademark availability, legal use, or freedom from third-party claims. The buyer is solely responsible for conducting thorough due diligence, including trademark searches and legal consultations, prior to purchase and use.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-        const email = 'joshua369x' + '@' + 'gmail.com';
-        const subject = '?subject=Inquiry: mbridge.capital/.fund';
-        const mailto = 'mailto:' + email + subject;
-        document.querySelector('.email-link').href = mailto;
-        document.getElementById('email-display').textContent = email;
+        particlesJS("particles", {
+            "particles": {
+                "number": { "value": 90, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": ["#ffd700", "#00ffea", "#aa00ff"] },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.6, "random": true },
+                "size": { "value": 5, "random": true },
+                "line_linked": { "enable": true, "distance": 180, "color": "#00ffea", "opacity": 0.4, "width": 1.5 },
+                "move": { "enable": true, "speed": 2.5, "direction": "none", "random": false, "straight": false, "out_mode": "out" }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": { "onhover": { "enable": true, "mode": "grab" }, "resize": true },
+                "modes": { "grab": { "distance": 160, "line_linked": { "opacity": 0.9 } } }
+            },
+            "retina_detect": true
+        });
+
+        document.getElementById('email').addEventListener('click', function() {
+            navigator.clipboard.writeText('joshua369x@gmail.com');
+            document.getElementById('copied').style.display = 'inline';
+            setTimeout(() => { document.getElementById('copied').style.display = 'none'; }, 2000);
+        });
     </script>
 </body>
 </html>
