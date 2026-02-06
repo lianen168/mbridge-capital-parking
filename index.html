@@ -3,291 +3,683 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mbridge.capital — Premium Domain for Sale</title>
+    <title>mbridge.capital | Premium Domain for Sale</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Playfair+Display:wght@700&display=swap');
-
-        body {
+        * {
             margin: 0;
             padding: 0;
-            background: #0a0e1a;
-            color: #d0d8ff;
-            font-family: 'Playfair Display', serif;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0066ff;
+            --secondary: #00d1ff;
+            --accent: #ff0066;
+            --dark: #0a0f25;
+            --darker: #050812;
+            --light: #f8f9ff;
+            --gray: #6c757d;
+            --success: #00c853;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
+            color: var(--light);
+            line-height: 1.6;
             overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(0, 102, 255, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(0, 209, 255, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 50% 50%, rgba(255, 0, 102, 0.05) 0%, transparent 30%);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Section */
+        header {
+            padding: 40px 0;
             text-align: center;
         }
 
-        header {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        .domain-display {
+            font-size: 5rem;
+            font-weight: 700;
+            margin: 40px 0;
+            line-height: 1;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            background-size: 300% 300%;
+            animation: gradientShift 8s ease infinite;
+            letter-spacing: -2px;
+            display: inline-block;
+            position: relative;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .domain-main {
+            display: inline-block;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 5rem;
+            font-weight: 700;
+            animation: pulse 2s ease-in-out infinite;
+            text-shadow: 0 0 20px rgba(0, 102, 255, 0.5);
+            position: relative;
+            z-index: 1;
+        }
+
+        .domain-extension {
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 300;
+            color: var(--light);
+            animation: float 3s ease-in-out infinite;
+            text-shadow: 0 0 15px rgba(0, 209, 255, 0.4);
+            position: relative;
+            top: -10px;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            color: var(--gray);
+            margin: 20px 0;
+            font-weight: 300;
+        }
+
+        /* Digital Flow Section */
+        .digital-flow {
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .flow-title {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: var(--light);
+        }
+
+        .flow-container {
+            background: rgba(10, 15, 37, 0.7);
+            border: 1px solid rgba(0, 102, 255, 0.3);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 20px auto;
+            max-width: 800px;
             position: relative;
             overflow: hidden;
         }
 
-        .domain-title {
-            font-size: 7.5vw;
-            font-weight: 700;
-            letter-spacing: 0.12em;
-            margin: 0;
-            line-height: 1.2;
-        }
-
-        .mbridge {
-            font-family: 'Orbitron', sans-serif;
-            background: linear-gradient(90deg, #00e0ff, #4080ff, #8040ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: glowPulse 5s infinite alternate, floatText 8s infinite ease-in-out;
-        }
-
-        .capital {
-            font-family: 'Playfair Display', serif;
-            color: #a0c0ff;
-            text-shadow: 0 0 20px #4080ff44, 0 0 40px #4080ff22;
-            animation: subtlePulse 6s infinite ease-in-out;
-        }
-
-        @keyframes glowPulse {
-            0% { text-shadow: 0 0 15px #00e0ff; }
-            100% { text-shadow: 0 0 40px #00e0ff, 0 0 70px #4080ff; }
-        }
-
-        @keyframes floatText {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-30px); }
-        }
-
-        @keyframes subtlePulse {
-            0%, 100% { opacity: 0.9; }
-            50% { opacity: 1; text-shadow: 0 0 30px #4080ff44; }
-        }
-
-        canvas#particles {
+        .flow-container::before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1;
-            opacity: 0.5;
+            background: linear-gradient(90deg, transparent, rgba(0, 102, 255, 0.1), transparent);
+            animation: scanline 4s linear infinite;
         }
 
-        .tagline {
-            font-size: 2.2vw;
-            margin-top: 40px;
-            opacity: 0.85;
-            font-style: italic;
-            animation: fadeIn 3s ease-in;
+        @keyframes scanline {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(50px); }
-            to { opacity: 0.85; transform: translateY(0); }
-        }
-
-        section {
-            padding: 90px 10%;
-            max-width: 1300px;
-            margin: 0 auto;
-        }
-
-        h2 {
-            font-size: 3rem;
-            margin-bottom: 60px;
-            background: linear-gradient(90deg, #4080ff, #00e0ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .areas {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
-            text-align: left;
-        }
-
-        .area-card {
-            background: rgba(20, 30, 60, 0.35);
-            padding: 35px;
-            border-radius: 18px;
-            border: 1px solid #4080ff33;
-            transition: all 0.5s;
-        }
-
-        .area-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 25px 50px rgba(64, 128, 255, 0.15);
-        }
-
-        .area-card h3 {
-            font-size: 1.7rem;
-            margin-bottom: 18px;
-            color: #00e0ff;
-        }
-
-        .area-card p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            opacity: 0.9;
-        }
-
-        .price-section {
-            background: linear-gradient(135deg, #0f1425, #080c18);
-            padding: 120px 10%;
-        }
-
-        .price {
-            font-size: 4.5rem;
+        .digital-text {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 4rem;
             font-weight: 700;
-            color: #a0c0ff;
-            margin: 40px 0;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            background-size: 200% 200%;
+            animation: digitalFlow 10s linear infinite;
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 1;
         }
 
-        .installment {
-            font-size: 1.7rem;
-            margin-bottom: 60px;
-            opacity: 0.85;
+        @keyframes digitalFlow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
         }
 
-        .buy-btn {
-            background: linear-gradient(45deg, #00e0ff, #4080ff);
-            color: #000;
-            font-size: 2rem;
-            font-weight: bold;
+        .flow-description {
+            color: var(--gray);
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+
+        /* Value Proposition */
+        .value-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .value-card {
+            background: rgba(10, 15, 37, 0.6);
+            border: 1px solid rgba(0, 102, 255, 0.2);
+            border-radius: 10px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(0, 102, 255, 0.2);
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .value-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--light);
+        }
+
+        .value-desc {
+            color: var(--gray);
+            font-size: 1rem;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            padding: 80px 0;
+            text-align: center;
+            background: rgba(5, 8, 18, 0.8);
+            border-top: 1px solid rgba(0, 102, 255, 0.3);
+            border-bottom: 1px solid rgba(0, 209, 255, 0.3);
+        }
+
+        .price-tag {
+            font-size: 6rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin: 30px 0;
+            animation: pricePulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pricePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .payment-info {
+            font-size: 1.8rem;
+            color: var(--light);
+            margin: 20px 0;
+        }
+
+        .payment-breakdown {
+            color: var(--gray);
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            color: white;
             padding: 20px 60px;
-            border: none;
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-decoration: none;
             border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 102, 255, 0.4);
+            border: none;
             cursor: pointer;
-            transition: all 0.4s;
-            box-shadow: 0 12px 35px rgba(64, 128, 255, 0.3);
+            margin: 20px;
         }
 
-        .buy-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 20px 50px rgba(64, 128, 255, 0.5);
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 102, 255, 0.6);
         }
 
-        footer {
-            padding: 70px 10%;
-            background: #050810;
+        .cta-button:active {
+            transform: translateY(1px);
         }
 
-        .email {
-            color: #00e0ff;
-            cursor: pointer;
-            text-decoration: underline;
+        .email-contact {
+            display: inline-block;
+            color: var(--secondary);
             font-size: 1.3rem;
+            text-decoration: none;
+            margin: 20px;
+            transition: all 0.3s ease;
+            position: relative;
         }
 
-        .copied {
-            display: none;
-            color: #a0c0ff;
-            margin-left: 12px;
-            font-weight: bold;
+        .email-contact:hover {
+            color: var(--primary);
+            transform: scale(1.05);
         }
 
-        .disclaimer {
-            max-width: 900px;
-            margin: 50px auto 0;
+        .email-contact::after {
+            content: '\f0e0';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            margin-left: 10px;
+        }
+
+        .copy-notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--success);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            transform: translateX(200%);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .copy-notification.show {
+            transform: translateX(0);
+        }
+
+        /* Disclaimer Section */
+        .disclaimer-section {
+            padding: 60px 0;
+            background: rgba(10, 15, 37, 0.3);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .disclaimer-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(5, 8, 18, 0.8);
+            border: 1px solid rgba(255, 0, 102, 0.2);
+            border-radius: 10px;
+            padding: 30px;
+        }
+
+        .disclaimer-title {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .disclaimer-text {
+            color: var(--gray);
+            line-height: 1.8;
             font-size: 0.95rem;
-            opacity: 0.7;
-            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            color: var(--gray);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .domain-display {
+                font-size: 3.5rem;
+            }
+
+            .domain-main {
+                font-size: 3.5rem;
+            }
+
+            .domain-extension {
+                font-size: 2.2rem;
+                top: -5px;
+            }
+
+            .tagline {
+                font-size: 1.2rem;
+            }
+
+            .digital-text {
+                font-size: 2.5rem;
+            }
+
+            .flow-container {
+                padding: 20px;
+            }
+
+            .price-tag {
+                font-size: 4rem;
+            }
+
+            .payment-info {
+                font-size: 1.4rem;
+            }
+
+            .cta-button {
+                padding: 15px 40px;
+                font-size: 1.2rem;
+            }
+
+            .value-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .domain-display {
+                font-size: 2.8rem;
+            }
+
+            .domain-main {
+                font-size: 2.8rem;
+            }
+
+            .domain-extension {
+                font-size: 1.8rem;
+                top: -3px;
+            }
+
+            .digital-text {
+                font-size: 2rem;
+            }
+
+            .price-tag {
+                font-size: 3rem;
+            }
+
+            .payment-info {
+                font-size: 1.1rem;
+            }
+
+            .payment-breakdown {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Animation for domain parts */
+        .domain-main::before {
+            content: 'mbridge';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 102, 255, 0.3), transparent);
+            animation: textGlow 3s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        @keyframes textGlow {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        /* Floating particles */
+        .particle {
+            position: absolute;
+            background: rgba(0, 102, 255, 0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: floatParticle 15s linear infinite;
+        }
+
+        @keyframes floatParticle {
+            0% { transform: translateY(100vh) translateX(0); opacity: 1; }
+            100% { transform: translateY(-100px) translateX(100px); opacity: 0; }
         }
     </style>
 </head>
 <body>
+    <!-- Particles Background -->
+    <div id="particles"></div>
 
+    <!-- Header Section -->
     <header>
-        <canvas id="particles"></canvas>
-        <h1 class="domain-title">
-            <span class="mbridge">mbridge</span><span class="capital">.capital</span>
-        </h1>
-        <p class="tagline">Bridging the World's Iconic Capitals</p>
+        <div class="container">
+            <h1 class="domain-display">
+                <span class="domain-main">mbridge</span><span class="domain-extension">.capital</span>
+            </h1>
+            <p class="tagline">The Ultimate Bridge for Capital & Finance Innovation</p>
+        </div>
     </header>
 
-    <section>
-        <h2>Premium Opportunities for Capital City Bridge Projects</h2>
-        <div class="areas">
-            <div class="area-card">
-                <h3>Capital City Bridge Tourism Platform</h3>
-                <p>Curated experiences and guided tours of landmark bridges in global capitals like London, Paris, and New York.</p>
+    <!-- Digital Flow Section -->
+    <section class="digital-flow">
+        <div class="container">
+            <h2 class="flow-title">mbridge</h2>
+            <div class="flow-container">
+                <div class="digital-text" id="digitalFlowText">mbridge</div>
             </div>
-            <div class="area-card">
-                <h3>Architectural Showcase of Capital Bridges</h3>
-                <p>Digital gallery and database highlighting engineering marvels in the world's major capital cities.</p>
-            </div>
-            <div class="area-card">
-                <h3>Historical Bridges of World Capitals</h3>
-                <p>Interactive timelines and stories behind historic bridges that define capital skylines.</p>
-            </div>
-            <div class="area-card">
-                <h3>VR/AR Capital Bridge Experiences</h3>
-                <p>Immersive virtual walks across iconic capital bridges with historical overlays and 360° views.</p>
-            </div>
-            <div class="area-card">
-                <h3>Capital Bridge Photography & Art</h3>
-                <p>Premium platform for professional photography, digital art, and NFT collections of capital city bridges.</p>
-            </div>
-            <div class="area-card">
-                <h3>Cultural Heritage in Capital Cities</h3>
-                <p>Preservation initiatives and educational content focused on bridges as cultural symbols in capitals.</p>
-            </div>
-            <div class="area-card">
-                <h3>Sustainable Urban Bridges in Capitals</h3>
-                <p>Eco-friendly design concepts and case studies for modern bridges in major capital cities.</p>
-            </div>
-            <div class="area-card">
-                <h3>Capital Culture Connection Hub</h3>
-                <p>Community platform linking people through shared appreciation of capital city landmarks and bridges.</p>
-            </div>
-            <div class="area-card">
-                <h3>Metaverse Capital Bridge Recreations</h3>
-                <p>Virtual worlds featuring accurate recreations of famous bridges from global capital cities.</p>
+            <p class="flow-description">A digital gateway connecting innovation with capital markets</p>
+        </div>
+    </section>
+
+    <!-- Value Proposition Section -->
+    <section class="value-section">
+        <div class="container">
+            <h2 class="flow-title">Why mbridge.capital?</h2>
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3 class="value-title">Premium Asset</h3>
+                    <p class="value-desc">Ultra-short, brandable domain with instant recognition in fintech</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="value-title">Market Ready</h3>
+                    <p class="value-desc">Perfect for capital management, investment platforms, and financial services</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="value-title">Secure Investment</h3>
+                    <p class="value-desc">Low trademark risk with clear positioning in financial technology</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="price-section">
-        <h2>Secure mbridge.capital Today</h2>
-        <div class="price">$21,000 USD</div>
-        <p class="installment">Flexible 7-month payment plan available</p>
-        <button class="buy-btn" onclick="window.open('https://www.spaceship.com/s/buy/mbridge.capital/jhz2BAjJfBqcUL4Y', '_blank')">Buy Now</button>
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <h2 class="flow-title">Investment Opportunity</h2>
+            <div class="price-tag">$21,000</div>
+            <p class="payment-info">Flexible Payment Plan Available</p>
+            <p class="payment-breakdown">7 monthly installments of $3,000</p>
+        </div>
     </section>
 
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <button class="cta-button" id="buyButton">
+                <i class="fas fa-shopping-cart"></i> Purchase Now
+            </button>
+            <a href="mailto:joshua369x@gmail.com" class="email-contact" id="emailLink">
+                joshua369x@gmail.com
+            </a>
+        </div>
+    </section>
+
+    <!-- Disclaimer Section -->
+    <section class="disclaimer-section">
+        <div class="container">
+            <div class="disclaimer-container">
+                <h3 class="disclaimer-title">Disclaimer</h3>
+                <p class="disclaimer-text">
+                    This domain name (mbridge.capital) is independently registered and offered for sale. 
+                    It is not affiliated with, endorsed by, or connected to any trademark holder, 
+                    including but not limited to entities holding trademarks for "MBRIDGE" in non-financial 
+                    categories (e.g., medical devices, education, software). The domain is positioned as a 
+                    generic term for capital management and financial technology innovation. 
+                    The buyer assumes all responsibility for trademark compliance and any necessary 
+                    trademark registration in relevant jurisdictions. This sale does not include any 
+                    trademark rights or intellectual property beyond the domain name itself.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>Contact: <span class="email" id="email">joshua369x@gmail.com</span> <span class="copied" id="copied">Copied!</span></p>
-        <div class="disclaimer">
-            Disclaimer: The domain mbridge.capital is offered for sale on an "as-is" basis. The seller makes no representations or warranties regarding trademark availability, legal use, or freedom from third-party claims. The buyer is solely responsible for conducting thorough due diligence, including trademark searches and legal consultations, prior to purchase and use.
+        <div class="container">
+            <p>&copy; 2026 mbridge.capital | Premium Domain for Sale</p>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <!-- Copy Notification -->
+    <div class="copy-notification" id="copyNotification">Email copied to clipboard!</div>
+
     <script>
-        particlesJS("particles", {
-            "particles": {
-                "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
-                "color": { "value": ["#00e0ff", "#4080ff", "#a0c0ff"] },
-                "shape": { "type": "circle" },
-                "opacity": { "value": 0.5, "random": true },
-                "size": { "value": 4, "random": true },
-                "line_linked": { "enable": true, "distance": 160, "color": "#4080ff", "opacity": 0.3, "width": 1.2 },
-                "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out" }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": { "onhover": { "enable": true, "mode": "grab" }, "resize": true },
-                "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 0.7 } } }
-            },
-            "retina_detect": true
+        // Digital Flow Animation
+        const digitalFlowText = document.getElementById('digitalFlowText');
+        const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let iteration = 0;
+        
+        const interval = setInterval(() => {
+            digitalFlowText.textContent = digitalFlowText.textContent
+                .split('')
+                .map((char, index) => {
+                    if (index < iteration / 5) {
+                        return 'mbridge'[index] || '';
+                    }
+                    return chars[Math.floor(Math.random() * chars.length)];
+                })
+                .join('');
+            
+            if (iteration >= 100) {
+                clearInterval(interval);
+                digitalFlowText.textContent = 'mbridge';
+            }
+            
+            iteration++;
+        }, 50);
+
+        // Email Copy Functionality
+        const emailLink = document.getElementById('emailLink');
+        const copyNotification = document.getElementById('copyNotification');
+        
+        emailLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Copy email to clipboard
+            const email = 'joshua369x@gmail.com';
+            navigator.clipboard.writeText(email).then(() => {
+                // Show notification
+                copyNotification.classList.add('show');
+                
+                // Hide after 2 seconds
+                setTimeout(() => {
+                    copyNotification.classList.remove('show');
+                }, 2000);
+            });
         });
 
-        document.getElementById('email').addEventListener('click', function() {
-            navigator.clipboard.writeText('joshua369x@gmail.com');
-            document.getElementById('copied').style.display = 'inline';
-            setTimeout(() => { document.getElementById('copied').style.display = 'none'; }, 2000);
+        // Buy Button - Open in new tab
+        const buyButton = document.getElementById('buyButton');
+        buyButton.addEventListener('click', function() {
+            window.open('https://www.spaceship.com/s/buy/mbridge.capital/jhz2BAjJfBqcUL4Y', '_blank');
+        });
+
+        // Create floating particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 20;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                // Random size
+                const size = Math.random() * 10 + 5;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                // Random position
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                
+                // Random animation duration
+                const duration = Math.random() * 10 + 10;
+                particle.style.animationDuration = `${duration}s`;
+                
+                // Random delay
+                particle.style.animationDelay = `${Math.random() * 5}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            
+            // Auto-hide notification after page load if shown
+            setTimeout(() => {
+                copyNotification.classList.remove('show');
+            }, 3000);
         });
     </script>
 </body>
