@@ -18,21 +18,29 @@
         }
 
         header {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             position: relative;
             overflow: hidden;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         .domain-title {
-            font-size: 7.5vw;
+            font-size: 12vw;
             font-weight: 700;
-            letter-spacing: 0.12em;
+            letter-spacing: 0.1em;
             margin: 0;
             line-height: 1.2;
+        }
+
+        @media (min-width: 768px) {
+            .domain-title {
+                font-size: 8vw;
+            }
         }
 
         .mbridge {
@@ -76,11 +84,18 @@
         }
 
         .tagline {
-            font-size: 2.2vw;
+            font-size: 4.5vw;
             margin-top: 40px;
             opacity: 0.85;
             font-style: italic;
             animation: fadeIn 3s ease-in;
+            max-width: 90%;
+        }
+
+        @media (min-width: 768px) {
+            .tagline {
+                font-size: 2.5vw;
+            }
         }
 
         @keyframes fadeIn {
@@ -89,29 +104,41 @@
         }
 
         section {
-            padding: 90px 10%;
-            max-width: 1300px;
+            padding: 80px 5%;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
+        @media (max-width: 767px) {
+            section {
+                padding: 60px 5%;
+            }
+        }
+
         h2 {
-            font-size: 3rem;
+            font-size: 2.8rem;
             margin-bottom: 60px;
             background: linear-gradient(90deg, #4080ff, #00e0ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
+        @media (max-width: 767px) {
+            h2 {
+                font-size: 2.2rem;
+            }
+        }
+
         .areas {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
             text-align: left;
         }
 
         .area-card {
             background: rgba(20, 30, 60, 0.35);
-            padding: 35px;
+            padding: 30px;
             border-radius: 18px;
             border: 1px solid #4080ff33;
             transition: all 0.5s;
@@ -123,31 +150,43 @@
         }
 
         .area-card h3 {
-            font-size: 1.7rem;
-            margin-bottom: 18px;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
             color: #00e0ff;
         }
 
         .area-card p {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             line-height: 1.6;
             opacity: 0.9;
         }
 
         .price-section {
             background: linear-gradient(135deg, #0f1425, #080c18);
-            padding: 120px 10%;
+            padding: 100px 5%;
+        }
+
+        @media (max-width: 767px) {
+            .price-section {
+                padding: 80px 5%;
+            }
         }
 
         .price {
-            font-size: 4.5rem;
+            font-size: 4rem;
             font-weight: 700;
             color: #a0c0ff;
             margin: 40px 0;
         }
 
+        @media (max-width: 767px) {
+            .price {
+                font-size: 3.2rem;
+            }
+        }
+
         .installment {
-            font-size: 1.7rem;
+            font-size: 1.6rem;
             margin-bottom: 60px;
             opacity: 0.85;
         }
@@ -155,9 +194,9 @@
         .buy-btn {
             background: linear-gradient(45deg, #00e0ff, #4080ff);
             color: #000;
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: bold;
-            padding: 20px 60px;
+            padding: 18px 50px;
             border: none;
             border-radius: 50px;
             cursor: pointer;
@@ -171,7 +210,7 @@
         }
 
         footer {
-            padding: 70px 10%;
+            padding: 70px 5%;
             background: #050810;
         }
 
@@ -195,6 +234,13 @@
             font-size: 0.95rem;
             opacity: 0.7;
             line-height: 1.7;
+        }
+
+        @media (max-width: 767px) {
+            .disclaimer-text {
+                font-size: 0.85rem;
+                padding: 0 10px;
+            }
         }
     </style>
 </head>
@@ -252,9 +298,9 @@
 
     <section class="price-section">
         <h2>Secure mbridge.capital Today</h2>
-        <div class="price">$21,000 USD</div>
+        <div class="price">$4,200 USD</div>
         <p class="installment">Flexible 7-month payment plan available</p>
-        <button class="buy-btn" onclick="window.open('https://www.spaceship.com/s/buy/mbridge.capital/jhz2BAjJfBqcUL4Y', '_blank')">Buy Now</button>
+        <button class="buy-btn" onclick="window.open('https://www.spaceship.com/s/buy/mbridge.capital/bQbnG6a4fCRF4LFT', '_blank')">Buy Now</button>
     </section>
 
     <footer>
@@ -269,7 +315,7 @@
         particlesJS("particles", {
             "particles": {
                 "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
-                "color": { "value": ["#00e0ff", "#4080ff", "#a0c0ff"] },
+                "color": { "value": ["#00e0ff", "#4080ff", "#a0e0ff"] },
                 "shape": { "type": "circle" },
                 "opacity": { "value": 0.5, "random": true },
                 "size": { "value": 4, "random": true },
