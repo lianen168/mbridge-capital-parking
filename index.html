@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mbridge.capital — Premium Domain for Sale</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="mbridge.capital is a premium domain for sale. Ideal for innovative platforms focusing on capital city bridges, VR/AR experiences, architectural showcases, and premium digital assets.">
+    <meta name="keywords" content="mbridge.capital, mbridge, premium domain, domain for sale, capital bridge, digital assets, VR bridges, finance domain, metaverse, capital projects">
+    <meta name="author" content="mbridge.capital">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mbridge.capital/">
+    <meta property="og:title" content="mbridge.capital — Premium Domain for Sale">
+    <meta property="og:description" content="Secure the premium domain mbridge.capital today. Perfect for innovative bridging projects and premium digital platforms.">
+    <meta property="og:site_name" content="mbridge.capital">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://mbridge.capital/">
+    <meta name="twitter:title" content="mbridge.capital — Premium Domain for Sale">
+    <meta name="twitter:description" content="Secure the premium domain mbridge.capital today. Perfect for innovative bridging projects.">
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Playfair+Display:wght@700&display=swap');
 
@@ -161,6 +180,77 @@
             opacity: 0.9;
         }
 
+        /* --- Quote Form Section --- */
+        .quote-section {
+            background: rgba(10, 14, 26, 0.6);
+            padding: 60px 5%;
+            max-width: 800px;
+            margin: 0 auto 60px auto;
+            border-radius: 18px;
+            border: 1px solid #4080ff33;
+            box-shadow: 0 10px 40px rgba(0, 224, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
+        .quote-section h2 {
+            margin-bottom: 30px;
+            font-size: 2.4rem;
+        }
+        .quote-form {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            text-align: left;
+        }
+        .quote-form label {
+            color: #a0c0ff;
+            font-size: 1rem;
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .quote-form input,
+        .quote-form textarea {
+            width: 100%;
+            padding: 16px;
+            background: rgba(20, 30, 60, 0.5);
+            border: 1px solid #4080ff55;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1.1rem;
+            font-family: 'Playfair Display', serif;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+        .quote-form input:focus,
+        .quote-form textarea:focus {
+            outline: none;
+            border-color: #00e0ff;
+            box-shadow: 0 0 15px rgba(0, 224, 255, 0.4);
+            background: rgba(20, 30, 60, 0.8);
+        }
+        .quote-btn {
+            background: transparent;
+            color: #00e0ff;
+            border: 2px solid #00e0ff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 16px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.4s;
+            font-family: 'Orbitron', sans-serif;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .quote-btn:hover {
+            background: rgba(0, 224, 255, 0.1);
+            box-shadow: 0 0 25px rgba(0, 224, 255, 0.5);
+            transform: translateY(-3px);
+            color: #fff;
+        }
+
         .price-section {
             background: linear-gradient(135deg, #0f1425, #080c18);
             padding: 100px 5%;
@@ -202,6 +292,8 @@
             cursor: pointer;
             transition: all 0.4s;
             box-shadow: 0 12px 35px rgba(64, 128, 255, 0.3);
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
         }
 
         .buy-btn:hover {
@@ -219,6 +311,7 @@
             cursor: pointer;
             text-decoration: underline;
             font-size: 1.3rem;
+            font-family: 'Orbitron', sans-serif;
         }
 
         .copied {
@@ -226,6 +319,7 @@
             color: #a0c0ff;
             margin-left: 12px;
             font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
         }
 
         .disclaimer-text {
@@ -296,6 +390,26 @@
         </div>
     </section>
 
+    <!-- Quote Form Section -->
+    <section class="quote-section">
+        <h2>Submit an Offer</h2>
+        <form class="quote-form" action="https://formspree.io/f/xjgeavoa" method="POST">
+            <div>
+                <label for="name">YOUR NAME</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+            </div>
+            <div>
+                <label for="email">YOUR EMAIL</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your contact email">
+            </div>
+            <div>
+                <label for="offer">YOUR OFFER (USD) / MESSAGE</label>
+                <textarea id="offer" name="offer" rows="4" required placeholder="Submit your offer or any inquiries..."></textarea>
+            </div>
+            <button type="submit" class="quote-btn">Send Offer</button>
+        </form>
+    </section>
+
     <section class="price-section">
         <h2>Secure mbridge.capital Today</h2>
         <div class="price">$4,200 USD</div>
@@ -304,7 +418,7 @@
     </section>
 
     <footer>
-        <p>Contact: <span class="email" id="email">joshua369x@gmail.com</span> <span class="copied" id="copied">Copied!</span></p>
+        <p>Contact: <span class="email" id="email">ltzwin2021@gmail.com</span> <span class="copied" id="copied">Copied!</span></p>
         <p class="disclaimer-text">
             Disclaimer: mbridge.capital is an independently registered domain with no affiliation to Project mBridge (Multiple CBDC Bridge), the BIS Innovation Hub, or any central bank participating in cross-border CBDC initiatives. This domain is not endorsed by or connected to any governmental financial infrastructure project. Buyer assumes full responsibility for trademark clearance and legal compliance prior to commercial use.
         </p>
@@ -312,6 +426,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
+        // Initialize Particles with fixed array formatting
         particlesJS("particles", {
             "particles": {
                 "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
@@ -330,8 +445,9 @@
             "retina_detect": true
         });
 
+        // Email Copy Function updated
         document.getElementById('email').addEventListener('click', function() {
-            navigator.clipboard.writeText('joshua369x@gmail.com');
+            navigator.clipboard.writeText('ltzwin2021@gmail.com');
             document.getElementById('copied').style.display = 'inline';
             setTimeout(() => { document.getElementById('copied').style.display = 'none'; }, 2000);
         });
